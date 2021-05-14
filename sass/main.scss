@@ -1,0 +1,8 @@
+$color: green;
+$main-width: 100px;
+body {
+  background-color: $color;
+  max-width: $main-width;
+  outline: 5px solid tomato;
+  margin: auto auto;
+}
