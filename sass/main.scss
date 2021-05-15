@@ -1,29 +1,124 @@
-$color: blue;
-$secondaryColor: red;
-$main-width: 1000px;
+$primary-text-color: #757575;
+$primary-white-color: #ffffff;
+$title-text-color: #212121;
+$accent-color: #2196f3;
+$background-dark-color: #2f303a;
+$background-light-color: #f5f4fa;
+$logo-text-color: #000000;
+$transparent-color: rgba(255, 255, 255, 0.6);
+$svg-primary-color: #afb1b8;
+$card-set-gap: 30px;
+$icon-soclink-gap: 10px;
+$card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-.link-scss {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 body {
-  background-color: $color;
-  max-width: $main-width;
-  outline: 5px solid tomato;
-  margin: auto auto;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+  background-color: $primary-white-color;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding: 0 15px;
+}
+.page-header {
+  min-height: 80px;
+  border-bottom: 1px solid #ececec;
+
+  &__nav-menu {
+    display: flex;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    align-items: center;
+
+    .logo {
+      font-family: Raleway;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 1.2;
+      text-decoration: none;
+      color: $logo-text-color;
+
+      .logo-half {
+        color: $accent-color;
+      }
+    }
+  }
+  .nav-list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-left: 93px;
+    list-style-type: none;
+
+    .nav-items:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    .nav-link {
+      position: relative;
+      text-decoration: none;
+      color: $title-text-color;
+      padding: 9px 0;
+
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+  }
 }
 
-p {
-  color: $secondaryColor;
-}
+// $color: blue;
+// $secondaryColor: red;
+// $main-width: 1000px;
 
-.section {
-  color: red;
-}
-.section .title {
-  color: green;
-}
-.section .text {
-  color: teal;
-}
+// .link-scss {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+// }
+// body {
+//   background-color: $color;
+//   max-width: $main-width;
+//   outline: 5px solid tomato;
+//   margin: auto auto;
+// }
+
+// p {
+//   color: $secondaryColor;
+// }
+
+// .section {
+//   color: red;
+
+//   .title {
+//     color: green;
+//   }
+//   .text {
+//     color: teal;
+//   }
+// }
+// .section {
+//   color: red;
+
+//   &-title {
+//     color: green;
+//   }
+//   &-text {
+//     color: teal;
+//   }
+// }
